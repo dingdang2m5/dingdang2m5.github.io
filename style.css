@@ -132,7 +132,50 @@ p { color: var(--muted); line-height: 1.8; }
   color: #cbd5e1;
 }
 
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-item, .experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.timeline-item h3, .experience-header h3 {
+  margin: 0 0 6px;
+}
+
+.timeline-item p, .experience-header p {
+  margin: 0;
+}
+
+.timeline-item span, .experience-header span {
+  color: var(--accent);
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.experience-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.experience-list li + li {
+  margin-top: 10px;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media (max-width: 780px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid, .two-column { grid-template-columns: 1fr; }
+  .timeline-item, .experience-header { flex-direction: column; gap: 8px; }
   .page { padding-top: 42px; }
 }
